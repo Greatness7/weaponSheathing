@@ -1,5 +1,4 @@
 local config = require("weaponSheathing.config")
-mwse.log(json.encode(config, {indent=true}))
 
 local function saveConfig()
     mwse.saveConfig("weaponSheathing", config)

@@ -13,7 +13,7 @@ if (mwse.buildDate == nil) or (mwse.buildDate < 20190415) then
 end
 
 
-local config = require("weaponSheathing.mcm").config
+local config = require("weaponSheathing.config")
 mwse.log("[Weapon Sheathing] Initialized Version 1.5")
 
 local attachSlots = {
