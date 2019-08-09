@@ -132,6 +132,12 @@ local function patchMesh(e)
     end
 end
 event.register("meshLoaded", patchMesh)
+
+
+local function registerMCM(e)
+    require("weaponSheathing.mcm")
+end
+event.register("modConfigReady", registerMCM)
 -------------
 
 
@@ -406,30 +412,4 @@ event.register("unequipped", function(e)
     if not validateRef(e.reference) then return end
     getUpdater(e.item)(e.reference, e.mobile, nil)
 end)
-------------
-
-
-------------
--- CONFIG --
-------------
-local function placeholderMCM(element)
-    element:createLabel{text="You must have EasyMCM installed to configure this mod."}
-    local link = element:createTextSelect{text="Go to EasyMCM Nexus Page"}
-    link.color = tes3ui.getPalette("link_color")
-    link.widget.idle = tes3ui.getPalette("link_color")
-    link.widget.over = tes3ui.getPalette("link_over_color")
-    link.widget.pressed = tes3ui.getPalette("link_pressed_color")
-    link:register("mouseClick", function()
-        os.execute("start https://www.nexusmods.com/morrowind/mods/46427?tab=files")
-    end)
-end
-
-
-local function registerModConfig()
-    local easyMCM = include("easyMCM.modConfig")
-    local mcmData = require("weaponSheathing.mcm")
-    local modData = easyMCM and easyMCM.registerModData(mcmData)
-    mwse.registerModConfig(mcmData.name, modData or {onCreate=placeholderMCM})
-end
-event.register("modConfigReady", registerModConfig)
 ------------
