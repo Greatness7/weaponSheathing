@@ -1,20 +1,10 @@
 --[[
-    Weapon Sheathing  v1.5
+    Weapon Sheathing  v1.6
     By Greatness7
 --]]
 
-if (mwse.buildDate == nil) or (mwse.buildDate < 20190415) then
-    event.register("initialized", function()
-        tes3.messageBox(
-            "[Weapon Sheathing] Your MWSE is out of date!"
-            .. " You will need to update to a more recent version to use this mod."
-        )
-    end)
-end
-
-
 local config = require("weaponSheathing.config")
-mwse.log("[Weapon Sheathing] Initialized Version 1.5")
+mwse.log("[Weapon Sheathing] Initialized Version 1.6")
 
 local attachSlots = {
     [0] = "Bip01 ShortBladeOneHand",
