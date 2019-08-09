@@ -271,6 +271,11 @@ local function updateShield(ref, mobile, shield)
         return
     end
 
+    -- catch some fake shields from mods
+    if shield.armorRating == 0 then
+        return
+    end
+
     -- load the sheath or shield visuals
     local sheath = overrides[shield.mesh:lower()]
     local visual = tes3.loadMesh(sheath or shield.mesh)
