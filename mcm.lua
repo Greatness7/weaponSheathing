@@ -37,10 +37,6 @@ credits:createHyperlink{
     exec = "start https://www.nexusmods.com/morrowind/users/1858915?tab=user+files",
 }
 credits:createHyperlink{
-    text = "Lord Berandas",
-    exec = "start https://www.nexusmods.com/morrowind/users/1858915?tab=user+files",
-}
-credits:createHyperlink{
     text = "Melchior Dahrk",
     exec = "start https://www.nexusmods.com/morrowind/users/962116?tab=user+files",
 }
@@ -65,10 +61,9 @@ credits:createHyperlink{
     exec = "start https://www.nexusmods.com/morrowind/users/899234?tab=user+files",
 }
 
-
--- Feature Toggles
-local toggles = preferences:createCategory{}
-toggles:createOnOffButton{
+-- Feature Buttons
+local buttons = preferences:createCategory{}
+buttons:createOnOffButton{
     label = "Show unreadied weapons",
     description = "Show unreadied weapons\n\nThis option controls whether or not equipped weapons will be visible while unreadied. Objects blocked by exclusion lists do not respect this setting and will always have their visibility disabled.\n\nDefault: On",
     variable = mwse.mcm:createTableVariable{
@@ -76,7 +71,7 @@ toggles:createOnOffButton{
         table = config,
     },
 }
-toggles:createOnOffButton{
+buttons:createOnOffButton{
     label = "Show unreadied shields on back",
     description = "Show unreadied shields on back\n\nThis option controls whether or not equipped shields will be visible on the character's back while unreadied. Objects blocked by exclusion lists do not respect this setting and will always have their visibility disabled.\n\nDefault: Off",
     variable = mwse.mcm:createTableVariable{
@@ -84,7 +79,7 @@ toggles:createOnOffButton{
         table = config,
     },
 }
-toggles:createOnOffButton{
+buttons:createOnOffButton{
     label = "Show custom scabbards and quivers",
     description = "Show custom scabbards and quivers\n\nThis option controls whether or not custom art assets will be used in conjunction with the other mod features. Objects blocked by exclusion lists do not respect this setting and will always have their visibility disabled.\n\nDefault: On",
     variable = mwse.mcm:createTableVariable{
