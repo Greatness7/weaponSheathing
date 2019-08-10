@@ -53,6 +53,10 @@ credits:createHyperlink{
     exec = "start https://www.nexusmods.com/morrowind/users/25319994?tab=user+files",
 }
 credits:createHyperlink{
+    text = "PikachunoTM",
+    exec = "start https://www.nexusmods.com/morrowind/users/16269634?tab=user+files",
+}
+credits:createHyperlink{
     text = "Remiros",
     exec = "start https://www.nexusmods.com/morrowind/users/899234?tab=user+files",
 }
