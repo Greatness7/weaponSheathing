@@ -13,6 +13,10 @@ preferences.sidebar:createInfo{
 -- Sidebar Credits
 local credits = preferences.sidebar:createCategory{label="Credits:"}
 credits:createHyperlink{
+    text = "akortunov",
+    exec = "https://www.nexusmods.com/morrowind/users/39882615?tab=user+files",
+}
+credits:createHyperlink{
     text = "Greatness7",
     exec = "start https://www.nexusmods.com/morrowind/users/64030?tab=user+files",
 }
