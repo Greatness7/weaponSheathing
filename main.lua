@@ -125,7 +125,7 @@ event.register("meshLoaded", patchMesh)
 
 
 local function registerMCM(e)
-    require("weaponSheathing.mcm")
+    dofile("Data Files\\MWSE\\mods\\weaponSheathing\\mcm.lua")
 end
 event.register("modConfigReady", registerMCM)
 -------------
